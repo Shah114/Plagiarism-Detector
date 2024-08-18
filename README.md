@@ -15,5 +15,6 @@ The following machine learning models were trained and evaluated: <br/>
 * Random Forest
 * Naive Bayes
 * Support Vector Machine (SVM) <br/>
+
 Among these, the SVM model provided the best results and was chosen for the final implementation. <br/>
 <br/>
