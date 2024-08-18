@@ -28,4 +28,5 @@ The dataset used for training the models was obtained from the AI with NOOR YouT
 <br/>
 
 ## How to Run 
+![image](https://github.com/user-attachments/assets/1f2ded65-8e18-4776-a5be-66279685cc26)
 
