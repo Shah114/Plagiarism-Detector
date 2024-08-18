@@ -29,8 +29,16 @@ The dataset used for training the models was obtained from the AI with NOOR YouT
 
 ## How to Run 
 ![image](https://github.com/user-attachments/assets/cb89224f-3990-4531-8f38-c08cb85e5e48)
+<br>
 
+## Future Work
+* Model Optimization: Experiment with hyperparameter tuning for the SVM model to further improve accuracy.
+* Advanced Features: Implement additional features such as handling different file formats (e.g., PDF, DOCX) and providing detailed reports on detected plagiarism.
+<br/>
 
+## Acknowledgments
+AI with NOOR YouTube Channel: The dataset for this project was sourced from the AI with NOOR YouTube channel.
+* https://youtu.be/eK1fS-QmVaE?si=m3C6YbGTjfaYob_B
 
 
 
