@@ -30,3 +30,5 @@ The dataset used for training the models was obtained from the AI with NOOR YouT
 * static/: This directory contains static assets such as CSS files and images used in the web application. <br/>
 <br/>
 
+## How to Run 
+
