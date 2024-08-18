@@ -1,7 +1,4 @@
-# Plagiarism-Detector
-NLP
-<br/>
-
+## Plagiarism-Detector
 This repository contains a Plagiarism Detection project that uses machine learning models to identify instances of plagiarism in textual data. The project includes data preprocessing, feature extraction, model training, and a simple web application for interacting with the trained model. <br/>
 <br/>
 
