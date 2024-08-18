@@ -18,3 +18,15 @@ The following machine learning models were trained and evaluated: <br/>
 
 Among these, the SVM model provided the best results and was chosen for the final implementation. <br/>
 <br/>
+
+**Dataset** <br/>
+The dataset used for training the models was obtained from the AI with NOOR YouTube channel. The dataset consists of labeled pairs of text, indicating whether one text is a plagiarized version of the other. <br/>
+<br/>
+
+**Project Structure** <br/>
+* PlagiarismDetector.ipynb: This Jupyter notebook contains the data preprocessing steps, including tokenization and feature extraction, as well as the training and evaluation of the machine learning models. 
+* app.py: This Python script serves as the backend for the web application. It uses Flask to create an interface where users can input text and receive predictions on whether the text is plagiarized.
+* templates/: This directory contains the HTML files used to render the web application interface.
+* static/: This directory contains static assets such as CSS files and images used in the web application. <br/>
+<br/>
+
