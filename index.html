@@ -1,64 +1,119 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset=""UTF-8>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plagiarism Detector</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: radial-gradient(circle, #000000, #00fc32);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.2));
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            transform: rotate(-2deg);
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+            100% { transform: rotate(-2deg); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 90%;
+            height: 150px;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(145deg, #ffffff, #f4f4f4);
+            box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            resize: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            transform: scale(1.02);
+            box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            background: linear-gradient(45deg, #2b1922, #00ff3c);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: transform 0.5s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        button:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.1);
+            color: #000000;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: popIn 0.5s ease-out;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
 </head>
-
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    width: 50%;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-textarea {
-    width: 90%;
-    height: 100px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.result {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e9ecef;
-}
-</style>
-
 <body>
     <div class="container">
         <h1>Plagiarism Detector</h1>
@@ -69,7 +124,7 @@ button:hover {
 
         {% if result %}
             <div class="result">{{ result }}</div>
-        {% endif %} 
+        {% endif %}
     </div>
 </body>
 </html>
